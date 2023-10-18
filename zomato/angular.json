@@ -29,7 +29,9 @@
               "../zomato/node_modules/bootstrap/dist/css/bootstrap.min.css"
 
             ],
-            "scripts": []
+            "scripts": [
+               
+            ]
           },
           "configurations": {
             "production": {
@@ -92,7 +94,9 @@
               "src/styles.css",
               "../zomato/node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+            
+            ]
           }
         }
       }

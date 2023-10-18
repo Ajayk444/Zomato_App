@@ -19,7 +19,7 @@ const routes: Routes = [
     path:"order", component:OrdersComponent
   },
   {
-    path:"restaurant", component:RestarantComponent
+    path:"restaurant/:categoryName", component:RestarantComponent
   }
 ];
 

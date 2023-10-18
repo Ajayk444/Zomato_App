@@ -1,8 +1,18 @@
 <div class="container">
-    <div class="card">
-        <a href="https://www.example.com" class="card-link" target="_blank">
-            <img src="Users/Acer/Desktop/Zomato Pic/Zomato_Main_Pic.jpg" alt="Example Image">
+  
+  <h1 class="text-center">Zomato Categories</h1>
+  <div class="row row-cols-2 row-cols-md-5 g-4">
+   
+    <div class="col" *ngFor="let data of categories">
+      <div class="card">
+        <a (click)="navigate(data)">
+          <img src="{{ data.photoUrl }}" class="card-img-top" alt="{{ data.categoryName }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ data.categoryName }}</h5>
+            <p class="card-text">Some quick example text to build on the card's content.</p>
+          </div>
         </a>
-        <p>This is an example image card with a link.</p>
+      </div>
     </div>
+  </div>
 </div>

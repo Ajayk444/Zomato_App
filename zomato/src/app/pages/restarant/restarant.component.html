@@ -1,8 +1,29 @@
 <div class="container">
-    <div class="card">
-        <a href="https://www.example.com" class="card-link" target="_blank">
-            <img src="Users/Acer/Desktop/Zomato Pic/Zomato_Main_Pic.jpg" alt="Example Image">
-        </a>
-        <p>This is an example image card with a link.</p>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let item of filteredData">
+      <div class="card h-100">
+        <img class="card-img-top" [src]="item.imageUrl" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.menuItemName }}</h5>
+          <p class="card-text">{{ item.description }}</p>
+          <p class="card-text">Price: {{ item.price }}</p>
+          <p class="card-text"><strong>Restaurant:</strong> {{ item.restaurantName }}</p>
+        </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-primary" (click)="openModal(item)">Add Item </button>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+  
+<div class="modal" id="myModal" >
+  <div class="modal-content" >
+    <button type="button" class="btn btn " (click)="closeModal()"></button>
+    <h2>Sample Data</h2>
+    <p></p>
+    <label>Enter the Quantity</label>
+    <input type="text" placeholder="Quantity" class="form-control">
+    <button type="button" class="btn btn" (click)="addItemToCart()">Add Item</button>
+  </div>
 </div>
